@@ -1,5 +1,5 @@
 import datetime
-import os.path
+import os
 
 from django.http import HttpResponse
 from django.shortcuts import render, reverse
@@ -35,5 +35,5 @@ def workdir_view(request):
     # по аналогии с `time_view`, напишите код,
     # который возвращает список файлов в рабочей 
     # директории
-    return HttpResponse(os.path)
+    return HttpResponse(os.listdir(path='.'))
     raise NotImplemented
